@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -602,7 +605,7 @@ function updateWeatherEffects(elementId, weatherCode) {
 // Función principal para obtener la temperatura y el código del clima
 async function fetchWeather(city) {
     try {
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city.lat},${city.lon}&aqi=no`);
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city.lat},${city.lon}&aqi=no`);
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         const data = await response.json();
         const temperature = data.current.temp_c.toFixed(1);
